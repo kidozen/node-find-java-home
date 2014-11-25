@@ -94,7 +94,7 @@ function findJavaHome(options, cb){
 }
 
 function findInRegistry(paths, errors, cb){
-  if(!paths.length) cb(errors.join('\r\n'));
+  if(!paths.length) return cb(errors.join('\r\n'));
 
   var keyPath = paths.splice(0, 1)[0];
 
